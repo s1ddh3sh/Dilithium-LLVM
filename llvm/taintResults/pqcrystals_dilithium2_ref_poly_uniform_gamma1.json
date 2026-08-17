@@ -1,0 +1,7 @@
+{
+  "2": {
+    "instr": "  call void @pqcrystals_dilithium2_ref_dilithium_shake256_stream_init(ptr noundef nonnull %state, ptr noundef %seed, i16 noundef zeroext %nonce) #3, !dbg !148",
+    "type": "CallInst",
+    "callee": "pqcrystals_dilithium2_ref_dilithium_shake256_stream_init"
+  }
+}

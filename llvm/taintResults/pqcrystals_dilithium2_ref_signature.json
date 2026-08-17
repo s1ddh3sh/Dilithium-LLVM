@@ -1,0 +1,24 @@
+{
+  "4": {
+    "instr": "  store i8 0, ptr %pre, align 1, !dbg !144",
+    "type": "StoreInst"
+  },
+  "7": {
+    "instr": "  store i8 %conv, ptr %arrayidx1, align 1, !dbg !147",
+    "type": "StoreInst"
+  },
+  "16": {
+    "instr": "  store i8 %0, ptr %arrayidx5, align 1, !dbg !158",
+    "type": "StoreInst"
+  },
+  "19": {
+    "instr": "  call void @randombytes(ptr noundef nonnull %rnd, i32 noundef 32) #3, !dbg !164",
+    "type": "CallInst",
+    "callee": "randombytes"
+  },
+  "21": {
+    "instr": "  %call = call i32 @pqcrystals_dilithium2_ref_signature_internal(ptr noundef %sig, ptr noundef %siglen, ptr noundef %m, i32 noundef %mlen, ptr noundef nonnull %pre, i32 noundef %add7, ptr noundef nonnull %rnd, ptr noundef %sk) #3, !dbg !166",
+    "type": "CallInst",
+    "callee": "pqcrystals_dilithium2_ref_signature_internal"
+  }
+}

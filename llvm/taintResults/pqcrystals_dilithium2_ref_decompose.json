@@ -1,0 +1,34 @@
+{
+  "0": {
+    "instr": "  %add = add nsw i32 %a, 127, !dbg !125",
+    "type": "BinOp"
+  },
+  "1": {
+    "instr": "  %shr = ashr i32 %add, 7, !dbg !126",
+    "type": "BinOp"
+  },
+  "2": {
+    "instr": "  %mul = mul nsw i32 %shr, 11275, !dbg !128",
+    "type": "BinOp"
+  },
+  "3": {
+    "instr": "  %add1 = add nsw i32 %mul, 8388608, !dbg !129",
+    "type": "BinOp"
+  },
+  "4": {
+    "instr": "  %shr2 = ashr i32 %add1, 24, !dbg !130",
+    "type": "BinOp"
+  },
+  "8": {
+    "instr": "  %sub6 = add i32 %mul5.neg, %a, !dbg !134",
+    "type": "BinOp"
+  },
+  "11": {
+    "instr": "  %sub10 = add i32 %and9.neg, %sub6, !dbg !137",
+    "type": "BinOp"
+  },
+  "12": {
+    "instr": "  store i32 %sub10, ptr %a0, align 4, !dbg !137",
+    "type": "StoreInst"
+  }
+}

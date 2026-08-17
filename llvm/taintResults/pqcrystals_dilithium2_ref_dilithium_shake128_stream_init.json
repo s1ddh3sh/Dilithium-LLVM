@@ -1,0 +1,20 @@
+{
+  "2": {
+    "instr": "  store i8 %conv, ptr %t, align 1, !dbg !142",
+    "type": "StoreInst"
+  },
+  "6": {
+    "instr": "  store i8 %conv2, ptr %arrayidx3, align 1, !dbg !146",
+    "type": "StoreInst"
+  },
+  "8": {
+    "instr": "  call void @pqcrystals_dilithium_fips202_ref_shake128_absorb(ptr noundef %state, ptr noundef %seed, i32 noundef 32) #3, !dbg !148",
+    "type": "CallInst",
+    "callee": "pqcrystals_dilithium_fips202_ref_shake128_absorb"
+  },
+  "9": {
+    "instr": "  call void @pqcrystals_dilithium_fips202_ref_shake128_absorb(ptr noundef %state, ptr noundef nonnull %t, i32 noundef 2) #3, !dbg !149",
+    "type": "CallInst",
+    "callee": "pqcrystals_dilithium_fips202_ref_shake128_absorb"
+  }
+}

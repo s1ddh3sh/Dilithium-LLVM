@@ -1,0 +1,22 @@
+{
+  "0": {
+    "instr": "  %sub = add nsw i32 %a, 4095, !dbg !125",
+    "type": "BinOp"
+  },
+  "1": {
+    "instr": "  %shr = ashr i32 %sub, 13, !dbg !126",
+    "type": "BinOp"
+  },
+  "2": {
+    "instr": "  %shl = and i32 %sub, -8192, !dbg !128",
+    "type": "BinOp"
+  },
+  "3": {
+    "instr": "  %sub1 = sub nsw i32 %a, %shl, !dbg !129",
+    "type": "BinOp"
+  },
+  "4": {
+    "instr": "  store i32 %sub1, ptr %a0, align 4, !dbg !130",
+    "type": "StoreInst"
+  }
+}

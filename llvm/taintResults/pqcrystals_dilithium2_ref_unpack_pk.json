@@ -1,0 +1,19 @@
+{
+  "6": {
+    "instr": "  %arrayidx1 = getelementptr inbounds nuw i8, ptr %rho, i32 %i.0, !dbg !144",
+    "type": "GetElementPtrInst"
+  },
+  "7": {
+    "instr": "  store i8 %0, ptr %arrayidx1, align 1, !dbg !145",
+    "type": "StoreInst"
+  },
+  "15": {
+    "instr": "  %arrayidx5 = getelementptr inbounds nuw [4 x [256 x i32]], ptr %t1, i32 0, i32 %i.1, !dbg !158",
+    "type": "GetElementPtrInst"
+  },
+  "18": {
+    "instr": "  call void @pqcrystals_dilithium2_ref_polyt1_unpack(ptr noundef %arrayidx5, ptr noundef nonnull %add.ptr6) #3, !dbg !161",
+    "type": "CallInst",
+    "callee": "pqcrystals_dilithium2_ref_polyt1_unpack"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "6": {
+    "instr": "  %arrayidx1 = getelementptr inbounds nuw i8, ptr %sk, i32 %i.0, !dbg !152",
+    "type": "GetElementPtrInst"
+  },
+  "7": {
+    "instr": "  store i8 %0, ptr %arrayidx1, align 1, !dbg !153",
+    "type": "StoreInst"
+  },
+  "10": {
+    "instr": "  %add.ptr = getelementptr inbounds nuw i8, ptr %sk, i32 32, !dbg !159",
+    "type": "GetElementPtrInst"
+  },
+  "17": {
+    "instr": "  %arrayidx6 = getelementptr inbounds nuw i8, ptr %add.ptr, i32 %i.1, !dbg !167",
+    "type": "GetElementPtrInst"
+  },
+  "18": {
+    "instr": "  store i8 %1, ptr %arrayidx6, align 1, !dbg !168",
+    "type": "StoreInst"
+  },
+  "21": {
+    "instr": "  %add.ptr10 = getelementptr inbounds nuw i8, ptr %sk, i32 64, !dbg !173",
+    "type": "GetElementPtrInst"
+  },
+  "28": {
+    "instr": "  %arrayidx15 = getelementptr inbounds nuw i8, ptr %add.ptr10, i32 %i.2, !dbg !181",
+    "type": "GetElementPtrInst"
+  },
+  "29": {
+    "instr": "  store i8 %2, ptr %arrayidx15, align 1, !dbg !182",
+    "type": "StoreInst"
+  },
+  "32": {
+    "instr": "  %add.ptr19 = getelementptr inbounds nuw i8, ptr %sk, i32 128, !dbg !187",
+    "type": "GetElementPtrInst"
+  },
+  "38": {
+    "instr": "  %add.ptr23 = getelementptr inbounds nuw i8, ptr %add.ptr19, i32 %mul, !dbg !195",
+    "type": "GetElementPtrInst"
+  },
+  "39": {
+    "instr": "  %arrayidx24 = getelementptr inbounds nuw [4 x [256 x i32]], ptr %s1, i32 0, i32 %i.3, !dbg !196",
+    "type": "GetElementPtrInst"
+  },
+  "40": {
+    "instr": "  call void @pqcrystals_dilithium2_ref_polyeta_pack(ptr noundef nonnull %add.ptr23, ptr noundef %arrayidx24) #3, !dbg !197",
+    "type": "CallInst",
+    "callee": "pqcrystals_dilithium2_ref_polyeta_pack"
+  },
+  "43": {
+    "instr": "  %add.ptr28 = getelementptr inbounds nuw i8, ptr %sk, i32 512, !dbg !202",
+    "type": "GetElementPtrInst"
+  },
+  "49": {
+    "instr": "  %add.ptr33 = getelementptr inbounds nuw i8, ptr %add.ptr28, i32 %mul32, !dbg !210",
+    "type": "GetElementPtrInst"
+  },
+  "50": {
+    "instr": "  %arrayidx34 = getelementptr inbounds nuw [4 x [256 x i32]], ptr %s2, i32 0, i32 %i.4, !dbg !211",
+    "type": "GetElementPtrInst"
+  },
+  "51": {
+    "instr": "  call void @pqcrystals_dilithium2_ref_polyeta_pack(ptr noundef nonnull %add.ptr33, ptr noundef %arrayidx34) #3, !dbg !212",
+    "type": "CallInst",
+    "callee": "pqcrystals_dilithium2_ref_polyeta_pack"
+  },
+  "54": {
+    "instr": "  %add.ptr38 = getelementptr inbounds nuw i8, ptr %sk, i32 896, !dbg !217",
+    "type": "GetElementPtrInst"
+  },
+  "60": {
+    "instr": "  %add.ptr43 = getelementptr inbounds nuw i8, ptr %add.ptr38, i32 %mul42, !dbg !225",
+    "type": "GetElementPtrInst"
+  },
+  "61": {
+    "instr": "  %arrayidx44 = getelementptr inbounds nuw [4 x [256 x i32]], ptr %t0, i32 0, i32 %i.5, !dbg !226",
+    "type": "GetElementPtrInst"
+  },
+  "62": {
+    "instr": "  call void @pqcrystals_dilithium2_ref_polyt0_pack(ptr noundef nonnull %add.ptr43, ptr noundef %arrayidx44) #3, !dbg !227",
+    "type": "CallInst",
+    "callee": "pqcrystals_dilithium2_ref_polyt0_pack"
+  }
+}

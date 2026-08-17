@@ -1,0 +1,16 @@
+{
+  "1": {
+    "instr": "  call void @pqcrystals_dilithium2_ref_poly_pointwise_montgomery(ptr noundef %w, ptr noundef %u, ptr noundef %v) #3, !dbg !138",
+    "type": "CallInst",
+    "callee": "pqcrystals_dilithium2_ref_poly_pointwise_montgomery"
+  },
+  "7": {
+    "instr": "  %arrayidx3 = getelementptr inbounds nuw [4 x [256 x i32]], ptr %v, i32 0, i32 %i.0, !dbg !148",
+    "type": "GetElementPtrInst"
+  },
+  "8": {
+    "instr": "  call void @pqcrystals_dilithium2_ref_poly_pointwise_montgomery(ptr noundef nonnull %t, ptr noundef nonnull %arrayidx2, ptr noundef nonnull %arrayidx3) #3, !dbg !149",
+    "type": "CallInst",
+    "callee": "pqcrystals_dilithium2_ref_poly_pointwise_montgomery"
+  }
+}

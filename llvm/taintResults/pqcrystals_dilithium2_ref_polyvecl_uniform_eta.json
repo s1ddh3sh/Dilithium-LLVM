@@ -1,0 +1,11 @@
+{
+  "5": {
+    "instr": "  %arrayidx = getelementptr inbounds nuw [4 x [256 x i32]], ptr %v, i32 0, i32 %i.0, !dbg !146",
+    "type": "GetElementPtrInst"
+  },
+  "6": {
+    "instr": "  call void @pqcrystals_dilithium2_ref_poly_uniform_eta(ptr noundef %arrayidx, ptr noundef %seed, i16 noundef zeroext %nonce.addr.0) #3, !dbg !147",
+    "type": "CallInst",
+    "callee": "pqcrystals_dilithium2_ref_poly_uniform_eta"
+  }
+}

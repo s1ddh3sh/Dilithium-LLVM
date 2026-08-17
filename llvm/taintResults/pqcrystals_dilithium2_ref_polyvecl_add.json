@@ -1,0 +1,15 @@
+{
+  "4": {
+    "instr": "  %arrayidx = getelementptr inbounds nuw [4 x [256 x i32]], ptr %w, i32 0, i32 %i.0, !dbg !143",
+    "type": "GetElementPtrInst"
+  },
+  "5": {
+    "instr": "  %arrayidx1 = getelementptr inbounds nuw [4 x [256 x i32]], ptr %u, i32 0, i32 %i.0, !dbg !144",
+    "type": "GetElementPtrInst"
+  },
+  "7": {
+    "instr": "  call void @pqcrystals_dilithium2_ref_poly_add(ptr noundef %arrayidx, ptr noundef %arrayidx1, ptr noundef %arrayidx2) #3, !dbg !146",
+    "type": "CallInst",
+    "callee": "pqcrystals_dilithium2_ref_poly_add"
+  }
+}

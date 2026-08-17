@@ -1,0 +1,18 @@
+{
+  "22": {
+    "instr": "  %arrayidx10 = getelementptr inbounds nuw i32, ptr %a, i32 %ctr.0, !dbg !150",
+    "type": "GetElementPtrInst"
+  },
+  "23": {
+    "instr": "  store i32 %sub8, ptr %arrayidx10, align 4, !dbg !151",
+    "type": "StoreInst"
+  },
+  "36": {
+    "instr": "  %arrayidx22 = getelementptr inbounds nuw i32, ptr %a, i32 %ctr.1, !dbg !163",
+    "type": "GetElementPtrInst"
+  },
+  "37": {
+    "instr": "  store i32 %sub20, ptr %arrayidx22, align 4, !dbg !164",
+    "type": "StoreInst"
+  }
+}

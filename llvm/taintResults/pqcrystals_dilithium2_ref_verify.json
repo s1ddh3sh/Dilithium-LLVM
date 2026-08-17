@@ -1,0 +1,19 @@
+{
+  "3": {
+    "instr": "  store i8 0, ptr %pre, align 1, !dbg !138",
+    "type": "StoreInst"
+  },
+  "6": {
+    "instr": "  store i8 %conv, ptr %arrayidx1, align 1, !dbg !141",
+    "type": "StoreInst"
+  },
+  "15": {
+    "instr": "  store i8 %0, ptr %arrayidx5, align 1, !dbg !152",
+    "type": "StoreInst"
+  },
+  "19": {
+    "instr": "  %call = call i32 @pqcrystals_dilithium2_ref_verify_internal(ptr noundef %sig, i32 noundef %siglen, ptr noundef %m, i32 noundef %mlen, ptr noundef nonnull %pre, i32 noundef %add6, ptr noundef %pk) #3, !dbg !159",
+    "type": "CallInst",
+    "callee": "pqcrystals_dilithium2_ref_verify_internal"
+  }
+}

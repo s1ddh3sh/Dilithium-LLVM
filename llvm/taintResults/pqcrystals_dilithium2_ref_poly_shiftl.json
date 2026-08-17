@@ -1,0 +1,18 @@
+{
+  "4": {
+    "instr": "  %arrayidx = getelementptr inbounds nuw [256 x i32], ptr %a, i32 0, i32 %i.0, !dbg !134",
+    "type": "GetElementPtrInst"
+  },
+  "5": {
+    "instr": "  %0 = load i32, ptr %arrayidx, align 4, !dbg !135",
+    "type": "LoadInst"
+  },
+  "6": {
+    "instr": "  %shl = shl i32 %0, 13, !dbg !135",
+    "type": "BinOp"
+  },
+  "7": {
+    "instr": "  store i32 %shl, ptr %arrayidx, align 4, !dbg !135",
+    "type": "StoreInst"
+  }
+}

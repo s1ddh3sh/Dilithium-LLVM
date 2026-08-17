@@ -1,0 +1,71 @@
+{
+  "4": {
+    "instr": "  %arrayidx = getelementptr inbounds nuw i8, ptr %c, i32 %i.0, !dbg !148",
+    "type": "GetElementPtrInst"
+  },
+  "5": {
+    "instr": "  %0 = load i8, ptr %arrayidx, align 1, !dbg !148",
+    "type": "LoadInst"
+  },
+  "6": {
+    "instr": "  %arrayidx1 = getelementptr inbounds nuw i8, ptr %sig, i32 %i.0, !dbg !149",
+    "type": "GetElementPtrInst"
+  },
+  "7": {
+    "instr": "  store i8 %0, ptr %arrayidx1, align 1, !dbg !150",
+    "type": "StoreInst"
+  },
+  "10": {
+    "instr": "  %add.ptr = getelementptr inbounds nuw i8, ptr %sig, i32 32, !dbg !156",
+    "type": "GetElementPtrInst"
+  },
+  "16": {
+    "instr": "  %add.ptr5 = getelementptr inbounds nuw i8, ptr %add.ptr, i32 %mul, !dbg !164",
+    "type": "GetElementPtrInst"
+  },
+  "17": {
+    "instr": "  %arrayidx6 = getelementptr inbounds nuw [4 x [256 x i32]], ptr %z, i32 0, i32 %i.1, !dbg !165",
+    "type": "GetElementPtrInst"
+  },
+  "18": {
+    "instr": "  call void @pqcrystals_dilithium2_ref_polyz_pack(ptr noundef nonnull %add.ptr5, ptr noundef %arrayidx6) #3, !dbg !166",
+    "type": "CallInst",
+    "callee": "pqcrystals_dilithium2_ref_polyz_pack"
+  },
+  "21": {
+    "instr": "  %add.ptr10 = getelementptr inbounds nuw i8, ptr %sig, i32 2336, !dbg !171",
+    "type": "GetElementPtrInst"
+  },
+  "27": {
+    "instr": "  %arrayidx14 = getelementptr inbounds nuw i8, ptr %add.ptr10, i32 %i.2, !dbg !180",
+    "type": "GetElementPtrInst"
+  },
+  "28": {
+    "instr": "  store i8 0, ptr %arrayidx14, align 1, !dbg !181",
+    "type": "StoreInst"
+  },
+  "40": {
+    "instr": "  %arrayidx25 = getelementptr inbounds nuw [4 x [256 x i32]], ptr %h, i32 0, i32 %i.3, i32 %j.0, !dbg !198",
+    "type": "GetElementPtrInst"
+  },
+  "41": {
+    "instr": "  %1 = load i32, ptr %arrayidx25, align 4, !dbg !198",
+    "type": "LoadInst"
+  },
+  "46": {
+    "instr": "  %arrayidx28 = getelementptr inbounds nuw i8, ptr %add.ptr10, i32 %k.1, !dbg !203",
+    "type": "GetElementPtrInst"
+  },
+  "47": {
+    "instr": "  store i8 %conv, ptr %arrayidx28, align 1, !dbg !204",
+    "type": "StoreInst"
+  },
+  "55": {
+    "instr": "  %arrayidx33 = getelementptr inbounds nuw i8, ptr %add.ptr10, i32 %add, !dbg !211",
+    "type": "GetElementPtrInst"
+  },
+  "56": {
+    "instr": "  store i8 %conv32, ptr %arrayidx33, align 1, !dbg !212",
+    "type": "StoreInst"
+  }
+}

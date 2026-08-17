@@ -1,0 +1,6 @@
+{
+  "2": {
+    "instr": "  %add = add nsw i32 %a, %and, !dbg !124",
+    "type": "BinOp"
+  }
+}

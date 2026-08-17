@@ -1,0 +1,23 @@
+{
+  "5": {
+    "instr": "  %arrayidx1 = getelementptr inbounds nuw [256 x i32], ptr %a, i32 0, i32 %i.0, !dbg !139",
+    "type": "GetElementPtrInst"
+  },
+  "6": {
+    "instr": "  %0 = load i32, ptr %arrayidx1, align 4, !dbg !139",
+    "type": "LoadInst"
+  },
+  "7": {
+    "instr": "  %call = call i32 @pqcrystals_dilithium2_ref_power2round(ptr noundef %arrayidx, i32 noundef %0) #3, !dbg !140",
+    "type": "CallInst",
+    "callee": "pqcrystals_dilithium2_ref_power2round"
+  },
+  "8": {
+    "instr": "  %arrayidx2 = getelementptr inbounds nuw [256 x i32], ptr %a1, i32 0, i32 %i.0, !dbg !141",
+    "type": "GetElementPtrInst"
+  },
+  "9": {
+    "instr": "  store i32 %call, ptr %arrayidx2, align 4, !dbg !142",
+    "type": "StoreInst"
+  }
+}

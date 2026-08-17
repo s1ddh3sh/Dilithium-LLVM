@@ -1,0 +1,7 @@
+{
+  "0": {
+    "instr": "  call void @pqcrystals_dilithium2_ref_invntt_tomont(ptr noundef %a) #3, !dbg !127",
+    "type": "CallInst",
+    "callee": "pqcrystals_dilithium2_ref_invntt_tomont"
+  }
+}

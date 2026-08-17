@@ -1,0 +1,16 @@
+{
+  "4": {
+    "instr": "  %call = call fastcc i32 @rej_eta(ptr noundef %a, i32 noundef 256, ptr noundef nonnull %buf, i32 noundef 136) #3, !dbg !151",
+    "type": "CallInst",
+    "callee": "rej_eta"
+  },
+  "10": {
+    "instr": "  %add.ptr = getelementptr inbounds nuw i32, ptr %a, i32 %ctr.0, !dbg !157",
+    "type": "GetElementPtrInst"
+  },
+  "12": {
+    "instr": "  %call6 = call fastcc i32 @rej_eta(ptr noundef %add.ptr, i32 noundef %sub, ptr noundef nonnull %buf, i32 noundef 136) #3, !dbg !159",
+    "type": "CallInst",
+    "callee": "rej_eta"
+  }
+}

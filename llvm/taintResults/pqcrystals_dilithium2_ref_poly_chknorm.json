@@ -1,0 +1,23 @@
+{
+  "6": {
+    "instr": "  %arrayidx = getelementptr inbounds nuw [256 x i32], ptr %a, i32 0, i32 %i.0, !dbg !137",
+    "type": "GetElementPtrInst"
+  },
+  "7": {
+    "instr": "  %0 = load i32, ptr %arrayidx, align 4, !dbg !137",
+    "type": "LoadInst"
+  },
+  "8": {
+    "instr": "  %1 = call i32 @llvm.smin.i32(i32 %0, i32 0), !dbg !140",
+    "type": "CallInst",
+    "callee": "llvm.smin.i32"
+  },
+  "9": {
+    "instr": "  %and = shl i32 %1, 1, !dbg !140",
+    "type": "BinOp"
+  },
+  "10": {
+    "instr": "  %sub = sub nsw i32 %0, %and, !dbg !141",
+    "type": "BinOp"
+  }
+}

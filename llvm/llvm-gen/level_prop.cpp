@@ -231,9 +231,9 @@ private:
           Level L = Level::Public;
           string name = A->getName().str();
 
-          if (name == "sk" || name == "key_b" || name == "key_a") {
+          if (name == "sk" || name == "s1") {
             L = Level::Secret;
-          } else if (name == "e") {
+          } else if (name == "s2") {
             L = Level::EphSecret;
           }
 
@@ -564,7 +564,7 @@ private:
 int main(int argc, char **argv) {
   LLVMContext ctx;
   SMDiagnostic err;
-  StringRef filename = "../dilithium_IR/dilithium2.ll";
+  StringRef filename = "../../dilithium_IR/dilithium2.ll";
   if (argc > 1) {
     filename = argv[1];
   }

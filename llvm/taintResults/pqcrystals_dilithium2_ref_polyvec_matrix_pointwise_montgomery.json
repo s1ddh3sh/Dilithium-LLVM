@@ -1,0 +1,7 @@
+{
+  "6": {
+    "instr": "  call void @pqcrystals_dilithium2_ref_polyvecl_pointwise_acc_montgomery(ptr noundef %arrayidx, ptr noundef %arrayidx1, ptr noundef %v) #3, !dbg !146",
+    "type": "CallInst",
+    "callee": "pqcrystals_dilithium2_ref_polyvecl_pointwise_acc_montgomery"
+  }
+}

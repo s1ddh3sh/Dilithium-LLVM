@@ -36,7 +36,7 @@ include_directories(${CLANG_INCLUDE_DIRS})
 
 
 add_executable(dilithium-ir llvm-gen.cpp)
-# add_executable(level_prop level_prop.cpp)
+add_executable(level_prop level_prop.cpp)
 llvm_map_components_to_libnames(LLVM_LIBS
   core
   support
@@ -44,16 +44,16 @@ llvm_map_components_to_libnames(LLVM_LIBS
   analysis
   passes
 )
-# target_link_libraries(level_prop
-#   PRIVATE
-#   ${LLVM_LIBS}
-#   ${Z3_LIBRARIES}
-# )
+target_link_libraries(level_prop
+  PRIVATE
+  ${LLVM_LIBS}
+  ${Z3_LIBRARIES}
+)
 
-# target_include_directories(level_prop
-#   PRIVATE
-#   ${Z3_INCLUDE_DIRS}
-# )
+target_include_directories(level_prop
+  PRIVATE
+  ${Z3_INCLUDE_DIRS}
+)
 # Link Clang *components*
 target_link_libraries(dilithium-ir
   PRIVATE

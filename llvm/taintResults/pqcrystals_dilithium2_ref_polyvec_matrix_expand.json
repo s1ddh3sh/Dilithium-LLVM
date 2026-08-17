@@ -1,0 +1,7 @@
+{
+  "12": {
+    "instr": "  call void @pqcrystals_dilithium2_ref_poly_uniform(ptr noundef %arrayidx4, ptr noundef %rho, i16 noundef zeroext %conv) #3, !dbg !152",
+    "type": "CallInst",
+    "callee": "pqcrystals_dilithium2_ref_poly_uniform"
+  }
+}

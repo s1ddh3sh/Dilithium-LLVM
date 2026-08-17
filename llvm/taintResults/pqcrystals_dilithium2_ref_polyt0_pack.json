@@ -1,0 +1,438 @@
+{
+  "5": {
+    "instr": "  %arrayidx = getelementptr inbounds nuw [256 x i32], ptr %a, i32 0, i32 %mul, !dbg !138",
+    "type": "GetElementPtrInst"
+  },
+  "6": {
+    "instr": "  %0 = load i32, ptr %arrayidx, align 4, !dbg !138",
+    "type": "LoadInst"
+  },
+  "7": {
+    "instr": "  %sub = sub nsw i32 4096, %0, !dbg !139",
+    "type": "BinOp"
+  },
+  "10": {
+    "instr": "  %arrayidx4 = getelementptr inbounds nuw [256 x i32], ptr %a, i32 0, i32 %add3, !dbg !146",
+    "type": "GetElementPtrInst"
+  },
+  "11": {
+    "instr": "  %1 = load i32, ptr %arrayidx4, align 4, !dbg !146",
+    "type": "LoadInst"
+  },
+  "12": {
+    "instr": "  %sub5 = sub nsw i32 4096, %1, !dbg !147",
+    "type": "BinOp"
+  },
+  "15": {
+    "instr": "  %arrayidx9 = getelementptr inbounds nuw [256 x i32], ptr %a, i32 0, i32 %add8, !dbg !150",
+    "type": "GetElementPtrInst"
+  },
+  "16": {
+    "instr": "  %2 = load i32, ptr %arrayidx9, align 4, !dbg !150",
+    "type": "LoadInst"
+  },
+  "17": {
+    "instr": "  %sub10 = sub nsw i32 4096, %2, !dbg !151",
+    "type": "BinOp"
+  },
+  "20": {
+    "instr": "  %arrayidx14 = getelementptr inbounds nuw [256 x i32], ptr %a, i32 0, i32 %add13, !dbg !154",
+    "type": "GetElementPtrInst"
+  },
+  "21": {
+    "instr": "  %3 = load i32, ptr %arrayidx14, align 4, !dbg !154",
+    "type": "LoadInst"
+  },
+  "22": {
+    "instr": "  %sub15 = sub nsw i32 4096, %3, !dbg !155",
+    "type": "BinOp"
+  },
+  "25": {
+    "instr": "  %arrayidx19 = getelementptr inbounds nuw [256 x i32], ptr %a, i32 0, i32 %add18, !dbg !158",
+    "type": "GetElementPtrInst"
+  },
+  "26": {
+    "instr": "  %4 = load i32, ptr %arrayidx19, align 4, !dbg !158",
+    "type": "LoadInst"
+  },
+  "27": {
+    "instr": "  %sub20 = sub nsw i32 4096, %4, !dbg !159",
+    "type": "BinOp"
+  },
+  "30": {
+    "instr": "  %arrayidx24 = getelementptr inbounds nuw [256 x i32], ptr %a, i32 0, i32 %add23, !dbg !162",
+    "type": "GetElementPtrInst"
+  },
+  "31": {
+    "instr": "  %5 = load i32, ptr %arrayidx24, align 4, !dbg !162",
+    "type": "LoadInst"
+  },
+  "32": {
+    "instr": "  %sub25 = sub nsw i32 4096, %5, !dbg !163",
+    "type": "BinOp"
+  },
+  "35": {
+    "instr": "  %arrayidx29 = getelementptr inbounds nuw [256 x i32], ptr %a, i32 0, i32 %add28, !dbg !166",
+    "type": "GetElementPtrInst"
+  },
+  "36": {
+    "instr": "  %6 = load i32, ptr %arrayidx29, align 4, !dbg !166",
+    "type": "LoadInst"
+  },
+  "37": {
+    "instr": "  %sub30 = sub nsw i32 4096, %6, !dbg !167",
+    "type": "BinOp"
+  },
+  "40": {
+    "instr": "  %arrayidx34 = getelementptr inbounds nuw [256 x i32], ptr %a, i32 0, i32 %add33, !dbg !170",
+    "type": "GetElementPtrInst"
+  },
+  "41": {
+    "instr": "  %7 = load i32, ptr %arrayidx34, align 4, !dbg !170",
+    "type": "LoadInst"
+  },
+  "42": {
+    "instr": "  %sub35 = sub nsw i32 4096, %7, !dbg !171",
+    "type": "BinOp"
+  },
+  "45": {
+    "instr": "  %arrayidx40 = getelementptr inbounds nuw i8, ptr %r, i32 %mul38, !dbg !174",
+    "type": "GetElementPtrInst"
+  },
+  "46": {
+    "instr": "  store i8 %conv, ptr %arrayidx40, align 1, !dbg !175",
+    "type": "StoreInst"
+  },
+  "47": {
+    "instr": "  %shr = lshr i32 %sub, 8, !dbg !176",
+    "type": "BinOp"
+  },
+  "50": {
+    "instr": "  %8 = getelementptr inbounds nuw i8, ptr %r, i32 %mul43, !dbg !179",
+    "type": "GetElementPtrInst"
+  },
+  "51": {
+    "instr": "  %arrayidx45 = getelementptr inbounds nuw i8, ptr %8, i32 1, !dbg !179",
+    "type": "GetElementPtrInst"
+  },
+  "52": {
+    "instr": "  store i8 %conv42, ptr %arrayidx45, align 1, !dbg !180",
+    "type": "StoreInst"
+  },
+  "54": {
+    "instr": "  %9 = getelementptr inbounds nuw i8, ptr %r, i32 %mul47, !dbg !182",
+    "type": "GetElementPtrInst"
+  },
+  "55": {
+    "instr": "  %arrayidx49 = getelementptr inbounds nuw i8, ptr %9, i32 1, !dbg !182",
+    "type": "GetElementPtrInst"
+  },
+  "56": {
+    "instr": "  %10 = load i8, ptr %arrayidx49, align 1, !dbg !183",
+    "type": "LoadInst"
+  },
+  "59": {
+    "instr": "  %conv51 = or i8 %11, %10, !dbg !183",
+    "type": "BinOp"
+  },
+  "60": {
+    "instr": "  store i8 %conv51, ptr %arrayidx49, align 1, !dbg !183",
+    "type": "StoreInst"
+  },
+  "61": {
+    "instr": "  %shr53 = lshr i32 %sub5, 3, !dbg !184",
+    "type": "BinOp"
+  },
+  "64": {
+    "instr": "  %12 = getelementptr inbounds nuw i8, ptr %r, i32 %mul55, !dbg !187",
+    "type": "GetElementPtrInst"
+  },
+  "65": {
+    "instr": "  %arrayidx57 = getelementptr inbounds nuw i8, ptr %12, i32 2, !dbg !187",
+    "type": "GetElementPtrInst"
+  },
+  "66": {
+    "instr": "  store i8 %conv54, ptr %arrayidx57, align 1, !dbg !188",
+    "type": "StoreInst"
+  },
+  "67": {
+    "instr": "  %shr59 = lshr i32 %sub5, 11, !dbg !189",
+    "type": "BinOp"
+  },
+  "70": {
+    "instr": "  %13 = getelementptr inbounds nuw i8, ptr %r, i32 %mul61, !dbg !192",
+    "type": "GetElementPtrInst"
+  },
+  "71": {
+    "instr": "  %arrayidx63 = getelementptr inbounds nuw i8, ptr %13, i32 3, !dbg !192",
+    "type": "GetElementPtrInst"
+  },
+  "72": {
+    "instr": "  store i8 %conv60, ptr %arrayidx63, align 1, !dbg !193",
+    "type": "StoreInst"
+  },
+  "74": {
+    "instr": "  %14 = getelementptr inbounds nuw i8, ptr %r, i32 %mul66, !dbg !195",
+    "type": "GetElementPtrInst"
+  },
+  "75": {
+    "instr": "  %arrayidx68 = getelementptr inbounds nuw i8, ptr %14, i32 3, !dbg !195",
+    "type": "GetElementPtrInst"
+  },
+  "76": {
+    "instr": "  %15 = load i8, ptr %arrayidx68, align 1, !dbg !196",
+    "type": "LoadInst"
+  },
+  "79": {
+    "instr": "  %conv71 = or i8 %16, %15, !dbg !196",
+    "type": "BinOp"
+  },
+  "80": {
+    "instr": "  store i8 %conv71, ptr %arrayidx68, align 1, !dbg !196",
+    "type": "StoreInst"
+  },
+  "81": {
+    "instr": "  %shr73 = lshr i32 %sub10, 6, !dbg !197",
+    "type": "BinOp"
+  },
+  "84": {
+    "instr": "  %17 = getelementptr inbounds nuw i8, ptr %r, i32 %mul75, !dbg !200",
+    "type": "GetElementPtrInst"
+  },
+  "85": {
+    "instr": "  %arrayidx77 = getelementptr inbounds nuw i8, ptr %17, i32 4, !dbg !200",
+    "type": "GetElementPtrInst"
+  },
+  "86": {
+    "instr": "  store i8 %conv74, ptr %arrayidx77, align 1, !dbg !201",
+    "type": "StoreInst"
+  },
+  "88": {
+    "instr": "  %18 = getelementptr inbounds nuw i8, ptr %r, i32 %mul80, !dbg !203",
+    "type": "GetElementPtrInst"
+  },
+  "89": {
+    "instr": "  %arrayidx82 = getelementptr inbounds nuw i8, ptr %18, i32 4, !dbg !203",
+    "type": "GetElementPtrInst"
+  },
+  "90": {
+    "instr": "  %19 = load i8, ptr %arrayidx82, align 1, !dbg !204",
+    "type": "LoadInst"
+  },
+  "93": {
+    "instr": "  %conv85 = or i8 %20, %19, !dbg !204",
+    "type": "BinOp"
+  },
+  "94": {
+    "instr": "  store i8 %conv85, ptr %arrayidx82, align 1, !dbg !204",
+    "type": "StoreInst"
+  },
+  "95": {
+    "instr": "  %shr87 = lshr i32 %sub15, 1, !dbg !205",
+    "type": "BinOp"
+  },
+  "98": {
+    "instr": "  %21 = getelementptr inbounds nuw i8, ptr %r, i32 %mul89, !dbg !208",
+    "type": "GetElementPtrInst"
+  },
+  "99": {
+    "instr": "  %arrayidx91 = getelementptr inbounds nuw i8, ptr %21, i32 5, !dbg !208",
+    "type": "GetElementPtrInst"
+  },
+  "100": {
+    "instr": "  store i8 %conv88, ptr %arrayidx91, align 1, !dbg !209",
+    "type": "StoreInst"
+  },
+  "101": {
+    "instr": "  %shr93 = lshr i32 %sub15, 9, !dbg !210",
+    "type": "BinOp"
+  },
+  "104": {
+    "instr": "  %22 = getelementptr inbounds nuw i8, ptr %r, i32 %mul95, !dbg !213",
+    "type": "GetElementPtrInst"
+  },
+  "105": {
+    "instr": "  %arrayidx97 = getelementptr inbounds nuw i8, ptr %22, i32 6, !dbg !213",
+    "type": "GetElementPtrInst"
+  },
+  "106": {
+    "instr": "  store i8 %conv94, ptr %arrayidx97, align 1, !dbg !214",
+    "type": "StoreInst"
+  },
+  "108": {
+    "instr": "  %23 = getelementptr inbounds nuw i8, ptr %r, i32 %mul100, !dbg !216",
+    "type": "GetElementPtrInst"
+  },
+  "109": {
+    "instr": "  %arrayidx102 = getelementptr inbounds nuw i8, ptr %23, i32 6, !dbg !216",
+    "type": "GetElementPtrInst"
+  },
+  "110": {
+    "instr": "  %24 = load i8, ptr %arrayidx102, align 1, !dbg !217",
+    "type": "LoadInst"
+  },
+  "113": {
+    "instr": "  %conv105 = or i8 %25, %24, !dbg !217",
+    "type": "BinOp"
+  },
+  "114": {
+    "instr": "  store i8 %conv105, ptr %arrayidx102, align 1, !dbg !217",
+    "type": "StoreInst"
+  },
+  "115": {
+    "instr": "  %shr107 = lshr i32 %sub20, 4, !dbg !218",
+    "type": "BinOp"
+  },
+  "118": {
+    "instr": "  %26 = getelementptr inbounds nuw i8, ptr %r, i32 %mul109, !dbg !221",
+    "type": "GetElementPtrInst"
+  },
+  "119": {
+    "instr": "  %arrayidx111 = getelementptr inbounds nuw i8, ptr %26, i32 7, !dbg !221",
+    "type": "GetElementPtrInst"
+  },
+  "120": {
+    "instr": "  store i8 %conv108, ptr %arrayidx111, align 1, !dbg !222",
+    "type": "StoreInst"
+  },
+  "121": {
+    "instr": "  %shr113 = lshr i32 %sub20, 12, !dbg !223",
+    "type": "BinOp"
+  },
+  "124": {
+    "instr": "  %27 = getelementptr inbounds nuw i8, ptr %r, i32 %mul115, !dbg !226",
+    "type": "GetElementPtrInst"
+  },
+  "125": {
+    "instr": "  %arrayidx117 = getelementptr inbounds nuw i8, ptr %27, i32 8, !dbg !226",
+    "type": "GetElementPtrInst"
+  },
+  "126": {
+    "instr": "  store i8 %conv114, ptr %arrayidx117, align 1, !dbg !227",
+    "type": "StoreInst"
+  },
+  "128": {
+    "instr": "  %28 = getelementptr inbounds nuw i8, ptr %r, i32 %mul120, !dbg !229",
+    "type": "GetElementPtrInst"
+  },
+  "129": {
+    "instr": "  %arrayidx122 = getelementptr inbounds nuw i8, ptr %28, i32 8, !dbg !229",
+    "type": "GetElementPtrInst"
+  },
+  "130": {
+    "instr": "  %29 = load i8, ptr %arrayidx122, align 1, !dbg !230",
+    "type": "LoadInst"
+  },
+  "133": {
+    "instr": "  %conv125 = or i8 %30, %29, !dbg !230",
+    "type": "BinOp"
+  },
+  "134": {
+    "instr": "  store i8 %conv125, ptr %arrayidx122, align 1, !dbg !230",
+    "type": "StoreInst"
+  },
+  "135": {
+    "instr": "  %shr127 = lshr i32 %sub25, 7, !dbg !231",
+    "type": "BinOp"
+  },
+  "138": {
+    "instr": "  %31 = getelementptr inbounds nuw i8, ptr %r, i32 %mul129, !dbg !234",
+    "type": "GetElementPtrInst"
+  },
+  "139": {
+    "instr": "  %arrayidx131 = getelementptr inbounds nuw i8, ptr %31, i32 9, !dbg !234",
+    "type": "GetElementPtrInst"
+  },
+  "140": {
+    "instr": "  store i8 %conv128, ptr %arrayidx131, align 1, !dbg !235",
+    "type": "StoreInst"
+  },
+  "142": {
+    "instr": "  %32 = getelementptr inbounds nuw i8, ptr %r, i32 %mul134, !dbg !237",
+    "type": "GetElementPtrInst"
+  },
+  "143": {
+    "instr": "  %arrayidx136 = getelementptr inbounds nuw i8, ptr %32, i32 9, !dbg !237",
+    "type": "GetElementPtrInst"
+  },
+  "144": {
+    "instr": "  %33 = load i8, ptr %arrayidx136, align 1, !dbg !238",
+    "type": "LoadInst"
+  },
+  "147": {
+    "instr": "  %conv139 = or i8 %34, %33, !dbg !238",
+    "type": "BinOp"
+  },
+  "148": {
+    "instr": "  store i8 %conv139, ptr %arrayidx136, align 1, !dbg !238",
+    "type": "StoreInst"
+  },
+  "149": {
+    "instr": "  %shr141 = lshr i32 %sub30, 2, !dbg !239",
+    "type": "BinOp"
+  },
+  "152": {
+    "instr": "  %35 = getelementptr inbounds nuw i8, ptr %r, i32 %mul143, !dbg !242",
+    "type": "GetElementPtrInst"
+  },
+  "153": {
+    "instr": "  %arrayidx145 = getelementptr inbounds nuw i8, ptr %35, i32 10, !dbg !242",
+    "type": "GetElementPtrInst"
+  },
+  "154": {
+    "instr": "  store i8 %conv142, ptr %arrayidx145, align 1, !dbg !243",
+    "type": "StoreInst"
+  },
+  "155": {
+    "instr": "  %shr147 = lshr i32 %sub30, 10, !dbg !244",
+    "type": "BinOp"
+  },
+  "158": {
+    "instr": "  %36 = getelementptr inbounds nuw i8, ptr %r, i32 %mul149, !dbg !247",
+    "type": "GetElementPtrInst"
+  },
+  "159": {
+    "instr": "  %arrayidx151 = getelementptr inbounds nuw i8, ptr %36, i32 11, !dbg !247",
+    "type": "GetElementPtrInst"
+  },
+  "160": {
+    "instr": "  store i8 %conv148, ptr %arrayidx151, align 1, !dbg !248",
+    "type": "StoreInst"
+  },
+  "162": {
+    "instr": "  %37 = getelementptr inbounds nuw i8, ptr %r, i32 %mul154, !dbg !250",
+    "type": "GetElementPtrInst"
+  },
+  "163": {
+    "instr": "  %arrayidx156 = getelementptr inbounds nuw i8, ptr %37, i32 11, !dbg !250",
+    "type": "GetElementPtrInst"
+  },
+  "164": {
+    "instr": "  %38 = load i8, ptr %arrayidx156, align 1, !dbg !251",
+    "type": "LoadInst"
+  },
+  "167": {
+    "instr": "  %conv159 = or i8 %39, %38, !dbg !251",
+    "type": "BinOp"
+  },
+  "168": {
+    "instr": "  store i8 %conv159, ptr %arrayidx156, align 1, !dbg !251",
+    "type": "StoreInst"
+  },
+  "169": {
+    "instr": "  %shr161 = lshr i32 %sub35, 5, !dbg !252",
+    "type": "BinOp"
+  },
+  "172": {
+    "instr": "  %40 = getelementptr inbounds nuw i8, ptr %r, i32 %mul163, !dbg !255",
+    "type": "GetElementPtrInst"
+  },
+  "173": {
+    "instr": "  %arrayidx165 = getelementptr inbounds nuw i8, ptr %40, i32 12, !dbg !255",
+    "type": "GetElementPtrInst"
+  },
+  "174": {
+    "instr": "  store i8 %conv162, ptr %arrayidx165, align 1, !dbg !256",
+    "type": "StoreInst"
+  }
+}

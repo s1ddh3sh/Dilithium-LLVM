@@ -1,0 +1,58 @@
+{
+  "5": {
+    "instr": "  %arrayidx = getelementptr inbounds nuw [256 x i32], ptr %a, i32 0, i32 %mul, !dbg !138",
+    "type": "GetElementPtrInst"
+  },
+  "6": {
+    "instr": "  %0 = load i32, ptr %arrayidx, align 4, !dbg !138",
+    "type": "LoadInst"
+  },
+  "13": {
+    "instr": "  %arrayidx6 = getelementptr inbounds nuw [256 x i32], ptr %a, i32 0, i32 %add5, !dbg !144",
+    "type": "GetElementPtrInst"
+  },
+  "14": {
+    "instr": "  %1 = load i32, ptr %arrayidx6, align 4, !dbg !144",
+    "type": "LoadInst"
+  },
+  "24": {
+    "instr": "  %arrayidx14 = getelementptr inbounds nuw [256 x i32], ptr %a, i32 0, i32 %add13, !dbg !150",
+    "type": "GetElementPtrInst"
+  },
+  "25": {
+    "instr": "  %4 = load i32, ptr %arrayidx14, align 4, !dbg !150",
+    "type": "LoadInst"
+  },
+  "26": {
+    "instr": "  %shr = lshr i32 %4, 2, !dbg !151",
+    "type": "BinOp"
+  },
+  "34": {
+    "instr": "  %arrayidx21 = getelementptr inbounds nuw [256 x i32], ptr %a, i32 0, i32 %add20, !dbg !157",
+    "type": "GetElementPtrInst"
+  },
+  "35": {
+    "instr": "  %6 = load i32, ptr %arrayidx21, align 4, !dbg !157",
+    "type": "LoadInst"
+  },
+  "46": {
+    "instr": "  %arrayidx31 = getelementptr inbounds nuw [256 x i32], ptr %a, i32 0, i32 %add30, !dbg !163",
+    "type": "GetElementPtrInst"
+  },
+  "47": {
+    "instr": "  %10 = load i32, ptr %arrayidx31, align 4, !dbg !163",
+    "type": "LoadInst"
+  },
+  "48": {
+    "instr": "  %shr32 = lshr i32 %10, 4, !dbg !164",
+    "type": "BinOp"
+  },
+  "56": {
+    "instr": "  %arrayidx39 = getelementptr inbounds nuw [256 x i32], ptr %a, i32 0, i32 %add38, !dbg !170",
+    "type": "GetElementPtrInst"
+  },
+  "57": {
+    "instr": "  %12 = load i32, ptr %arrayidx39, align 4, !dbg !170",
+    "type": "LoadInst"
+  }
+}

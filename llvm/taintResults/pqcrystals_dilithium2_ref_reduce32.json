@@ -1,0 +1,18 @@
+{
+  "0": {
+    "instr": "  %add = add nsw i32 %a, 4194304, !dbg !123",
+    "type": "BinOp"
+  },
+  "1": {
+    "instr": "  %shr = ashr i32 %add, 23, !dbg !124",
+    "type": "BinOp"
+  },
+  "2": {
+    "instr": "  %mul.neg = mul nsw i32 %shr, -8380417, !dbg !126",
+    "type": "BinOp"
+  },
+  "3": {
+    "instr": "  %sub = add i32 %mul.neg, %a, !dbg !127",
+    "type": "BinOp"
+  }
+}
