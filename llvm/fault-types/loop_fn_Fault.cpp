@@ -293,9 +293,9 @@ public:
       PN->addIncoming(incomingVal, prevIterExit);
     }
 
-    // for (BasicBlock *BB : origBlocks) {
-    //   BB->eraseFromParent();
-    // }
+    for (BasicBlock *BB : origBlocks) {
+      BB->eraseFromParent();
+    }
   }
 };
 
@@ -970,9 +970,9 @@ public:
       PN->addIncoming(incomingVal, prevIterExit);
     }
 
-    // for (BasicBlock *BB : origBlocks) {
-    //   BB->eraseFromParent();
-    // }
+    for (BasicBlock *BB : origBlocks) {
+      BB->eraseFromParent();
+    }
   }
 };
 
@@ -1006,9 +1006,9 @@ Function *getOrCloneHelper(Module &M, Module &SourceM, StringRef Name) {
 
 void replaceMemoryIntrinsics(Module &M, Module &SourceM) {
 
-  Function *MayoMemset = getOrCloneHelper(M, SourceM, "kyber_memset");
+  Function *MayoMemset = getOrCloneHelper(M, SourceM, "dilithium_memset");
 
-  Function *MayoMemcpy = getOrCloneHelper(M, SourceM, "kyber_memcpy");
+  Function *MayoMemcpy = getOrCloneHelper(M, SourceM, "dilithium_memcpy");
 
   SmallVector<CallInst *, 64> Worklist;
 
