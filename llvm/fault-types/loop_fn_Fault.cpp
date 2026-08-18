@@ -53,6 +53,7 @@
 #include "json_parser.h"
 
 using namespace llvm;
+static constexpr unsigned kMaxUnrollTripCount = 10000;
 
 enum FaultMode { LOOP_SKIP = 0, FUNC_SKIP = 1 };
 static Instruction *getInstByIndex(Function &F, unsigned targetInst) {
@@ -117,20 +118,43 @@ public:
     auto &LI = FAM.getResult<LoopAnalysis>(F);
     auto &SE = FAM.getResult<ScalarEvolutionAnalysis>(F);
 
-    std::vector<Loop *> loops(LI.begin(), LI.end());
-    for (Loop *L : loops) {
+    // Locate the specific instruction we ultimately want to skip, and find
+    // the innermost loop that actually contains it (not just top-level loops).
+    Instruction *target = findInstByLocator(F, loc);
+    if (!target) {
+      errs() << "FuncSkip: target instruction not found\n";
+      return PreservedAnalyses::all();
+    }
+
+    Loop *innermost = LI.getLoopFor(target->getParent());
+    if (!innermost) {
+      errs() << "FuncSkip: target instruction is not inside any loop\n";
+      return PreservedAnalyses::all();
+    }
+
+    // Walk from the innermost containing loop outward, unrolling the first
+    // one (innermost-first) whose trip count we can actually determine.
+    for (Loop *L = innermost; L; L = L->getParentLoop()) {
       unsigned tripCount = SE.getSmallConstantTripCount(L);
       if (tripCount == 0) {
-        errs() << "cannot determine trip count\n";
+        errs() << "Loop at depth " << L->getLoopDepth()
+               << " has unknown/zero trip count; trying next outer loop\n";
         continue;
       }
-
+      if (tripCount > kMaxUnrollTripCount) {
+        errs() << "Loop trip count " << tripCount << " exceeds max ("
+               << kMaxUnrollTripCount << "); skipping\n";
+        continue;
+      }
       errs() << "Loop trip count: " << tripCount << "\n";
       addLabelNUnrollWithFuncSkip(F, L, LI, SE, tripCount);
+      return PreservedAnalyses::none();
     }
-    return PreservedAnalyses::none();
-  }
 
+    errs() << "FuncSkip: could not determine a trip count for any loop "
+              "containing the target instruction\n";
+    return PreservedAnalyses::all();
+  }
   void addLabelNUnrollWithFuncSkip(Function &F, Loop *L, LoopInfo &LI,
                                    ScalarEvolution &SE, unsigned tripCount) {
     BasicBlock *header = L->getHeader();
@@ -824,7 +848,11 @@ public:
         errs() << "cannot determine trip count\n";
         continue;
       }
-
+      if (tripCount > kMaxUnrollTripCount) {
+        errs() << "Loop trip count " << tripCount << " exceeds max ("
+               << kMaxUnrollTripCount << "); skipping unroll for this loop\n";
+        continue;
+      }
       errs() << "Loop trip count: " << tripCount << "\n";
       addLabelNUnroll(F, L, LI, SE, tripCount);
     }
@@ -1269,6 +1297,8 @@ int main(int argc, char **argv) {
 
   // Unroll for original.ll
   for (Function &F : *funcModule) {
+    if (F.getName() == "main")
+      continue;
     F.removeFnAttr(Attribute::NoInline);
     F.removeFnAttr(Attribute::OptimizeNone);
     if (!F.isDeclaration())
