@@ -139,7 +139,7 @@ public:
       if (tripCount == 0) {
         errs() << "Loop at depth " << L->getLoopDepth()
                << " has unknown/zero trip count; trying next outer loop\n";
-        continue;
+        tripCount = 2;
       }
       if (tripCount > kMaxUnrollTripCount) {
         errs() << "Loop trip count " << tripCount << " exceeds max ("
@@ -1334,11 +1334,11 @@ int main(int argc, char **argv) {
   }
 
   makePB(*funcModule, [](ModulePassManager &MPM) {
-    {
-      InlineParams IP;
-      IP.DefaultThreshold = 10000;
-      MPM.addPass(ModuleInlinerPass(IP));
-    }
+    // {
+    //   InlineParams IP;
+    //   IP.DefaultThreshold = 10000;
+    //   MPM.addPass(ModuleInlinerPass(IP));
+    // }
     // Constant-prop + simplify
     {
       FunctionPassManager FPM;
@@ -1533,18 +1533,18 @@ int main(int argc, char **argv) {
         FPM.addPass(PromotePass());
         MPM.addPass(createModuleToFunctionPassAdaptor(std::move(FPM)));
 
-        InlineParams IP;
-        IP.DefaultThreshold = 10000;
-        MPM.addPass(ModuleInlinerPass(IP));
+        // InlineParams IP;
+        // IP.DefaultThreshold = 10000;
+        // MPM.addPass(ModuleInlinerPass(IP));
       } else {
         FunctionPassManager FPM;
         FPM.addPass(DirectFuncSkip(skipLoc, funcName));
         FPM.addPass(PromotePass());
         MPM.addPass(createModuleToFunctionPassAdaptor(std::move(FPM)));
 
-        InlineParams IP;
-        IP.DefaultThreshold = 10000;
-        MPM.addPass(ModuleInlinerPass(IP));
+        // InlineParams IP;
+        // IP.DefaultThreshold = 10000;
+        // MPM.addPass(ModuleInlinerPass(IP));
       }
 
       MPM.addPass(GlobalOptPass());
