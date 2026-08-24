@@ -139,7 +139,7 @@ public:
       if (tripCount == 0) {
         errs() << "Loop at depth " << L->getLoopDepth()
                << " has unknown/zero trip count; trying next outer loop\n";
-        tripCount = 2;
+        tripCount = 1;
       }
       if (tripCount > kMaxUnrollTripCount) {
         errs() << "Loop trip count " << tripCount << " exceeds max ("
