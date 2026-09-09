@@ -1,0 +1,10 @@
+{"output":"sig","m":182,"pre":0,"rnd":10,"sk":159,"sig":50,"distribution":{"rnd":"random_bytes","sk":"secret_key","sig":"signature"}}
+{"output":"sig","m":210,"pre":0,"rnd":142,"sk":232,"sig":227,"distribution":{"rnd":"random_bytes","sk":"secret_key","sig":"signature"}}
+{"output":"sig","m":186,"pre":0,"rnd":55,"sk":191,"sig":23,"distribution":{"rnd":"random_bytes","sk":"secret_key","sig":"signature"}}
+{"output":"sig","m":102,"pre":0,"rnd":150,"sk":180,"sig":86,"distribution":{"rnd":"random_bytes","sk":"secret_key","sig":"signature"}}
+{"output":"sig","m":118,"pre":0,"rnd":39,"sk":18,"sig":233,"distribution":{"rnd":"random_bytes","sk":"secret_key","sig":"signature"}}
+{"output":"sig","m":144,"pre":0,"rnd":109,"sk":140,"sig":33,"distribution":{"rnd":"random_bytes","sk":"secret_key","sig":"signature"}}
+{"output":"sig","m":44,"pre":0,"rnd":106,"sk":7,"sig":163,"distribution":{"rnd":"random_bytes","sk":"secret_key","sig":"signature"}}
+{"output":"sig","m":51,"pre":0,"rnd":160,"sk":160,"sig":134,"distribution":{"rnd":"random_bytes","sk":"secret_key","sig":"signature"}}
+{"output":"sig","m":97,"pre":0,"rnd":11,"sk":220,"sig":195,"distribution":{"rnd":"random_bytes","sk":"secret_key","sig":"signature"}}
+{"output":"sig","m":39,"pre":0,"rnd":220,"sk":62,"sig":115,"distribution":{"rnd":"random_bytes","sk":"secret_key","sig":"signature"}}
