@@ -27,6 +27,14 @@
     "instr": "  %2 = load i32, ptr %arrayidx10, align 4, !dbg !149",
     "type": "LoadInst"
   },
+  "16": {
+    "instr": "  %3 = trunc i32 %2 to i8, !dbg !150",
+    "type": "CastInst"
+  },
+  "17": {
+    "instr": "  %conv12 = sub i8 2, %3, !dbg !150",
+    "type": "BinOp"
+  },
   "20": {
     "instr": "  %arrayidx16 = getelementptr inbounds nuw [256 x i32], ptr %a, i32 0, i32 %add15, !dbg !153",
     "type": "GetElementPtrInst"
@@ -50,6 +58,14 @@
   "29": {
     "instr": "  %6 = load i32, ptr %arrayidx28, align 4, !dbg !159",
     "type": "LoadInst"
+  },
+  "30": {
+    "instr": "  %7 = trunc i32 %6 to i8, !dbg !160",
+    "type": "CastInst"
+  },
+  "31": {
+    "instr": "  %conv30 = sub i8 2, %7, !dbg !160",
+    "type": "BinOp"
   },
   "34": {
     "instr": "  %arrayidx34 = getelementptr inbounds nuw [256 x i32], ptr %a, i32 0, i32 %add33, !dbg !163",
@@ -79,9 +95,21 @@
     "instr": "  %or = or i32 %conv, %conv47, !dbg !168",
     "type": "BinOp"
   },
+  "43": {
+    "instr": "  %conv49 = zext i8 %conv12 to i32, !dbg !169",
+    "type": "CastInst"
+  },
+  "44": {
+    "instr": "  %shl50 = shl nuw nsw i32 %conv49, 6, !dbg !170",
+    "type": "BinOp"
+  },
   "45": {
     "instr": "  %or51 = or i32 %or, %shl50, !dbg !171",
     "type": "BinOp"
+  },
+  "46": {
+    "instr": "  %conv52 = trunc i32 %or51 to i8, !dbg !172",
+    "type": "CastInst"
   },
   "48": {
     "instr": "  %arrayidx55 = getelementptr inbounds nuw i8, ptr %r, i32 %mul53, !dbg !174",
@@ -90,6 +118,14 @@
   "49": {
     "instr": "  store i8 %conv52, ptr %arrayidx55, align 1, !dbg !175",
     "type": "StoreInst"
+  },
+  "50": {
+    "instr": "  %11 = lshr i8 %conv12, 2, !dbg !176",
+    "type": "BinOp"
+  },
+  "51": {
+    "instr": "  %shr58 = zext nneg i8 %11 to i32, !dbg !176",
+    "type": "CastInst"
   },
   "52": {
     "instr": "  %12 = shl i32 %4, 1, !dbg !177",
@@ -119,9 +155,21 @@
     "instr": "  %or66 = or i32 %or62, %conv64, !dbg !180",
     "type": "BinOp"
   },
+  "59": {
+    "instr": "  %conv68 = zext i8 %conv30 to i32, !dbg !181",
+    "type": "CastInst"
+  },
+  "60": {
+    "instr": "  %shl69 = shl nuw nsw i32 %conv68, 7, !dbg !182",
+    "type": "BinOp"
+  },
   "61": {
     "instr": "  %or70 = or i32 %or66, %shl69, !dbg !183",
     "type": "BinOp"
+  },
+  "62": {
+    "instr": "  %conv71 = trunc i32 %or70 to i8, !dbg !184",
+    "type": "CastInst"
   },
   "64": {
     "instr": "  %14 = getelementptr inbounds nuw i8, ptr %r, i32 %mul72, !dbg !186",
@@ -134,6 +182,14 @@
   "66": {
     "instr": "  store i8 %conv71, ptr %arrayidx74, align 1, !dbg !187",
     "type": "StoreInst"
+  },
+  "67": {
+    "instr": "  %15 = lshr i8 %conv30, 1, !dbg !188",
+    "type": "BinOp"
+  },
+  "68": {
+    "instr": "  %shr77 = zext nneg i8 %15 to i32, !dbg !188",
+    "type": "CastInst"
   },
   "69": {
     "instr": "  %16 = shl i32 %8, 2, !dbg !189",
@@ -158,6 +214,10 @@
   "74": {
     "instr": "  %or85 = or i32 %or81, %conv83, !dbg !192",
     "type": "BinOp"
+  },
+  "75": {
+    "instr": "  %conv86 = trunc i32 %or85 to i8, !dbg !193",
+    "type": "CastInst"
   },
   "77": {
     "instr": "  %18 = getelementptr inbounds nuw i8, ptr %r, i32 %mul87, !dbg !195",

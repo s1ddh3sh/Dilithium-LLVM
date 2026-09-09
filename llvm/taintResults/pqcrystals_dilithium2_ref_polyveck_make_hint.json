@@ -1,4 +1,8 @@
 {
+  "2": {
+    "instr": "  %s.0 = phi i32 [ 0, %entry ], [ %add, %for.body ], !dbg !133",
+    "type": "PHINode"
+  },
   "5": {
     "instr": "  %arrayidx = getelementptr inbounds nuw [4 x [256 x i32]], ptr %h, i32 0, i32 %i.0, !dbg !144",
     "type": "GetElementPtrInst"
@@ -15,5 +19,13 @@
     "instr": "  %call = call i32 @pqcrystals_dilithium2_ref_poly_make_hint(ptr noundef %arrayidx, ptr noundef %arrayidx1, ptr noundef %arrayidx2) #3, !dbg !147",
     "type": "CallInst",
     "callee": "pqcrystals_dilithium2_ref_poly_make_hint"
+  },
+  "9": {
+    "instr": "  %add = add i32 %s.0, %call, !dbg !148",
+    "type": "BinOp"
+  },
+  "12": {
+    "instr": "  %s.0.lcssa = phi i32 [ %s.0, %for.cond ], !dbg !133",
+    "type": "PHINode"
   }
 }

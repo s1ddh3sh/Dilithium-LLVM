@@ -7,6 +7,14 @@
     "instr": "  %0 = load i32, ptr %arrayidx, align 4, !dbg !138",
     "type": "LoadInst"
   },
+  "7": {
+    "instr": "  %conv = trunc i32 %0 to i8, !dbg !139",
+    "type": "CastInst"
+  },
+  "10": {
+    "instr": "  store i8 %conv, ptr %arrayidx3, align 1, !dbg !142",
+    "type": "StoreInst"
+  },
   "12": {
     "instr": "  %arrayidx6 = getelementptr inbounds nuw [256 x i32], ptr %a, i32 0, i32 %mul4, !dbg !144",
     "type": "GetElementPtrInst"
@@ -34,6 +42,14 @@
   "20": {
     "instr": "  %or = or i32 %shr7, %shl, !dbg !150",
     "type": "BinOp"
+  },
+  "21": {
+    "instr": "  %conv11 = trunc i32 %or to i8, !dbg !151",
+    "type": "CastInst"
+  },
+  "25": {
+    "instr": "  store i8 %conv11, ptr %arrayidx14, align 1, !dbg !154",
+    "type": "StoreInst"
   },
   "28": {
     "instr": "  %arrayidx17 = getelementptr inbounds nuw [256 x i32], ptr %a, i32 0, i32 %add16, !dbg !157",
@@ -63,6 +79,14 @@
     "instr": "  %or23 = or i32 %shr18, %shl22, !dbg !163",
     "type": "BinOp"
   },
+  "37": {
+    "instr": "  %conv24 = trunc i32 %or23 to i8, !dbg !164",
+    "type": "CastInst"
+  },
+  "41": {
+    "instr": "  store i8 %conv24, ptr %arrayidx27, align 1, !dbg !167",
+    "type": "StoreInst"
+  },
   "44": {
     "instr": "  %arrayidx30 = getelementptr inbounds nuw [256 x i32], ptr %a, i32 0, i32 %add29, !dbg !170",
     "type": "GetElementPtrInst"
@@ -91,6 +115,14 @@
     "instr": "  %or36 = or i32 %shr31, %shl35, !dbg !176",
     "type": "BinOp"
   },
+  "53": {
+    "instr": "  %conv37 = trunc i32 %or36 to i8, !dbg !177",
+    "type": "CastInst"
+  },
+  "57": {
+    "instr": "  store i8 %conv37, ptr %arrayidx40, align 1, !dbg !180",
+    "type": "StoreInst"
+  },
   "60": {
     "instr": "  %arrayidx43 = getelementptr inbounds nuw [256 x i32], ptr %a, i32 0, i32 %add42, !dbg !183",
     "type": "GetElementPtrInst"
@@ -102,5 +134,13 @@
   "62": {
     "instr": "  %shr44 = lshr i32 %10, 2, !dbg !184",
     "type": "BinOp"
+  },
+  "63": {
+    "instr": "  %conv45 = trunc i32 %shr44 to i8, !dbg !185",
+    "type": "CastInst"
+  },
+  "67": {
+    "instr": "  store i8 %conv45, ptr %arrayidx48, align 1, !dbg !188",
+    "type": "StoreInst"
   }
 }

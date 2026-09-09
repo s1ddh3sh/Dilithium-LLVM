@@ -52,6 +52,10 @@
     "instr": "  %1 = load i32, ptr %arrayidx25, align 4, !dbg !198",
     "type": "LoadInst"
   },
+  "42": {
+    "instr": "  %cmp26.not = icmp eq i32 %1, 0, !dbg !200",
+    "type": "CmpInst"
+  },
   "46": {
     "instr": "  %arrayidx28 = getelementptr inbounds nuw i8, ptr %add.ptr10, i32 %k.1, !dbg !203",
     "type": "GetElementPtrInst"

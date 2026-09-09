@@ -1,14 +1,22 @@
 {
-  "6": {
-    "instr": "  %arrayidx1 = getelementptr inbounds nuw i8, ptr %rho, i32 %i.0, !dbg !144",
+  "4": {
+    "instr": "  %arrayidx = getelementptr inbounds nuw i8, ptr %pk, i32 %i.0, !dbg !143",
     "type": "GetElementPtrInst"
+  },
+  "5": {
+    "instr": "  %0 = load i8, ptr %arrayidx, align 1, !dbg !143",
+    "type": "LoadInst"
   },
   "7": {
     "instr": "  store i8 %0, ptr %arrayidx1, align 1, !dbg !145",
     "type": "StoreInst"
   },
-  "15": {
-    "instr": "  %arrayidx5 = getelementptr inbounds nuw [4 x [256 x i32]], ptr %t1, i32 0, i32 %i.1, !dbg !158",
+  "10": {
+    "instr": "  %add.ptr = getelementptr inbounds nuw i8, ptr %pk, i32 32, !dbg !151",
+    "type": "GetElementPtrInst"
+  },
+  "17": {
+    "instr": "  %add.ptr6 = getelementptr inbounds nuw i8, ptr %add.ptr, i32 %mul, !dbg !160",
     "type": "GetElementPtrInst"
   },
   "18": {

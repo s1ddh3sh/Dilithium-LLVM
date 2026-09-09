@@ -12,5 +12,10 @@
     "instr": "  call void @pqcrystals_dilithium2_ref_poly_pointwise_montgomery(ptr noundef nonnull %t, ptr noundef nonnull %arrayidx2, ptr noundef nonnull %arrayidx3) #3, !dbg !149",
     "type": "CallInst",
     "callee": "pqcrystals_dilithium2_ref_poly_pointwise_montgomery"
+  },
+  "9": {
+    "instr": "  call void @pqcrystals_dilithium2_ref_poly_add(ptr noundef %w, ptr noundef %w, ptr noundef nonnull %t) #3, !dbg !150",
+    "type": "CallInst",
+    "callee": "pqcrystals_dilithium2_ref_poly_add"
   }
 }

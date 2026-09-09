@@ -28,6 +28,23 @@
     "instr": "  %add.ptr10 = getelementptr inbounds nuw i8, ptr %sig, i32 2336, !dbg !169",
     "type": "GetElementPtrInst"
   },
+  "24": {
+    "instr": "  %k.0 = phi i32 [ 0, %for.end9 ], [ %conv55, %for.inc56 ], !dbg !135",
+    "type": "PHINode"
+  },
+  "28": {
+    "instr": "  %k.0.lcssa8 = phi i32 [ %k.0, %for.cond11 ], !dbg !135",
+    "type": "PHINode"
+  },
+  "29": {
+    "instr": "  %k.0.lcssa = phi i32 [ %k.0, %for.cond11 ], !dbg !135",
+    "type": "PHINode"
+  },
+  "30": {
+    "instr": "  %umax = call i32 @llvm.umax.i32(i32 %k.0.lcssa8, i32 80), !dbg !180",
+    "type": "CallInst",
+    "callee": "llvm.umax.i32"
+  },
   "40": {
     "instr": "  %arrayidx22 = getelementptr inbounds nuw i8, ptr %add.ptr10, i32 %add, !dbg !194",
     "type": "GetElementPtrInst"
@@ -35,6 +52,14 @@
   "41": {
     "instr": "  %1 = load i8, ptr %arrayidx22, align 1, !dbg !194",
     "type": "LoadInst"
+  },
+  "42": {
+    "instr": "  %conv = zext i8 %1 to i32, !dbg !194",
+    "type": "CastInst"
+  },
+  "43": {
+    "instr": "  %cmp23 = icmp samesign ugt i32 %k.0, %conv, !dbg !195",
+    "type": "CmpInst"
   },
   "46": {
     "instr": "  %arrayidx26 = getelementptr inbounds nuw i8, ptr %add.ptr10, i32 %add25, !dbg !198",
@@ -44,6 +69,14 @@
     "instr": "  %2 = load i8, ptr %arrayidx26, align 1, !dbg !198",
     "type": "LoadInst"
   },
+  "48": {
+    "instr": "  %cmp28 = icmp ugt i8 %2, 80, !dbg !199",
+    "type": "CmpInst"
+  },
+  "51": {
+    "instr": "  %j.1 = phi i32 [ %inc51, %if.end46 ], [ %k.0, %for.cond30.preheader ], !dbg !202",
+    "type": "PHINode"
+  },
   "53": {
     "instr": "  %arrayidx32 = getelementptr inbounds nuw i8, ptr %add.ptr10, i32 %add31, !dbg !205",
     "type": "GetElementPtrInst"
@@ -51,6 +84,18 @@
   "54": {
     "instr": "  %3 = load i8, ptr %arrayidx32, align 1, !dbg !205",
     "type": "LoadInst"
+  },
+  "55": {
+    "instr": "  %conv33 = zext i8 %3 to i32, !dbg !205",
+    "type": "CastInst"
+  },
+  "56": {
+    "instr": "  %cmp34 = icmp samesign ult i32 %j.1, %conv33, !dbg !206",
+    "type": "CmpInst"
+  },
+  "58": {
+    "instr": "  %cmp37 = icmp samesign ugt i32 %j.1, %k.0, !dbg !207",
+    "type": "CmpInst"
   },
   "60": {
     "instr": "  %arrayidx39 = getelementptr inbounds nuw i8, ptr %add.ptr10, i32 %j.1, !dbg !211",
@@ -72,6 +117,10 @@
     "instr": "  %6 = load i8, ptr %arrayidx41, align 1, !dbg !212",
     "type": "LoadInst"
   },
+  "65": {
+    "instr": "  %cmp43.not = icmp ugt i8 %4, %6, !dbg !213",
+    "type": "CmpInst"
+  },
   "67": {
     "instr": "  %arrayidx48 = getelementptr inbounds nuw i8, ptr %add.ptr10, i32 %j.1, !dbg !214",
     "type": "GetElementPtrInst"
@@ -79,6 +128,14 @@
   "68": {
     "instr": "  %7 = load i8, ptr %arrayidx48, align 1, !dbg !214",
     "type": "LoadInst"
+  },
+  "69": {
+    "instr": "  %idxprom = zext i8 %7 to i32, !dbg !215",
+    "type": "CastInst"
+  },
+  "72": {
+    "instr": "  %inc51 = add nuw nsw i32 %j.1, 1, !dbg !217",
+    "type": "BinOp"
   },
   "75": {
     "instr": "  %arrayidx54 = getelementptr inbounds nuw i8, ptr %add.ptr10, i32 %add53, !dbg !222",
@@ -88,6 +145,18 @@
     "instr": "  %8 = load i8, ptr %arrayidx54, align 1, !dbg !222",
     "type": "LoadInst"
   },
+  "77": {
+    "instr": "  %conv55 = zext i8 %8 to i32, !dbg !222",
+    "type": "CastInst"
+  },
+  "80": {
+    "instr": "  %j.2 = phi i32 [ %inc67, %for.inc66 ], [ %k.0.lcssa, %for.cond59.preheader ], !dbg !227",
+    "type": "PHINode"
+  },
+  "81": {
+    "instr": "  %exitcond11 = icmp ne i32 %j.2, %umax, !dbg !228",
+    "type": "CmpInst"
+  },
   "83": {
     "instr": "  %arrayidx63 = getelementptr inbounds nuw i8, ptr %add.ptr10, i32 %j.2, !dbg !230",
     "type": "GetElementPtrInst"
@@ -95,5 +164,13 @@
   "84": {
     "instr": "  %9 = load i8, ptr %arrayidx63, align 1, !dbg !230",
     "type": "LoadInst"
+  },
+  "85": {
+    "instr": "  %tobool.not = icmp eq i8 %9, 0, !dbg !230",
+    "type": "CmpInst"
+  },
+  "87": {
+    "instr": "  %inc67 = add nuw nsw i32 %j.2, 1, !dbg !232",
+    "type": "BinOp"
   }
 }

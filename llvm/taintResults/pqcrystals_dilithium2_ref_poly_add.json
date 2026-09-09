@@ -1,4 +1,12 @@
 {
+  "4": {
+    "instr": "  %arrayidx = getelementptr inbounds nuw [256 x i32], ptr %a, i32 0, i32 %i.0, !dbg !138",
+    "type": "GetElementPtrInst"
+  },
+  "5": {
+    "instr": "  %0 = load i32, ptr %arrayidx, align 4, !dbg !138",
+    "type": "LoadInst"
+  },
   "6": {
     "instr": "  %arrayidx1 = getelementptr inbounds nuw [256 x i32], ptr %b, i32 0, i32 %i.0, !dbg !139",
     "type": "GetElementPtrInst"
@@ -10,6 +18,10 @@
   "8": {
     "instr": "  %add = add nsw i32 %0, %1, !dbg !140",
     "type": "BinOp"
+  },
+  "9": {
+    "instr": "  %arrayidx2 = getelementptr inbounds nuw [256 x i32], ptr %c, i32 0, i32 %i.0, !dbg !141",
+    "type": "GetElementPtrInst"
   },
   "10": {
     "instr": "  store i32 %add, ptr %arrayidx2, align 4, !dbg !142",

@@ -11,6 +11,19 @@
     "instr": "  %2 = load i32, ptr %arrayidx8, align 4, !dbg !153",
     "type": "LoadInst"
   },
+  "22": {
+    "instr": "  %conv9 = sext i32 %2 to i64, !dbg !153",
+    "type": "CastInst"
+  },
+  "23": {
+    "instr": "  %mul = mul nsw i64 %conv, %conv9, !dbg !154",
+    "type": "BinOp"
+  },
+  "24": {
+    "instr": "  %call = call i32 @pqcrystals_dilithium2_ref_montgomery_reduce(i64 noundef %mul) #3, !dbg !155",
+    "type": "CallInst",
+    "callee": "pqcrystals_dilithium2_ref_montgomery_reduce"
+  },
   "25": {
     "instr": "  %arrayidx10 = getelementptr inbounds nuw i32, ptr %a, i32 %j.0, !dbg !157",
     "type": "GetElementPtrInst"

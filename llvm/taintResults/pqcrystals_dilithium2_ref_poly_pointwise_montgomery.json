@@ -6,5 +6,22 @@
   "8": {
     "instr": "  %1 = load i32, ptr %arrayidx1, align 4, !dbg !140",
     "type": "LoadInst"
+  },
+  "9": {
+    "instr": "  %conv2 = sext i32 %1 to i64, !dbg !140",
+    "type": "CastInst"
+  },
+  "10": {
+    "instr": "  %mul = mul nsw i64 %conv, %conv2, !dbg !141",
+    "type": "BinOp"
+  },
+  "11": {
+    "instr": "  %call = call i32 @pqcrystals_dilithium2_ref_montgomery_reduce(i64 noundef %mul) #3, !dbg !142",
+    "type": "CallInst",
+    "callee": "pqcrystals_dilithium2_ref_montgomery_reduce"
+  },
+  "13": {
+    "instr": "  store i32 %call, ptr %arrayidx3, align 4, !dbg !144",
+    "type": "StoreInst"
   }
 }

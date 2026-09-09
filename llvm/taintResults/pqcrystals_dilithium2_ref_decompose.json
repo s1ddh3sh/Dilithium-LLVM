@@ -19,9 +19,29 @@
     "instr": "  %shr2 = ashr i32 %add1, 24, !dbg !130",
     "type": "BinOp"
   },
+  "5": {
+    "instr": "  %0 = icmp sgt i32 %shr2, 43, !dbg !131",
+    "type": "CmpInst"
+  },
+  "6": {
+    "instr": "  %xor = select i1 %0, i32 0, i32 %shr2, !dbg !132",
+    "type": "Other"
+  },
+  "7": {
+    "instr": "  %mul5.neg = mul nsw i32 %xor, -190464, !dbg !133",
+    "type": "BinOp"
+  },
   "8": {
     "instr": "  %sub6 = add i32 %mul5.neg, %a, !dbg !134",
     "type": "BinOp"
+  },
+  "9": {
+    "instr": "  %1 = icmp sgt i32 %sub6, 4190208, !dbg !135",
+    "type": "CmpInst"
+  },
+  "10": {
+    "instr": "  %and9.neg = select i1 %1, i32 -8380417, i32 0, !dbg !136",
+    "type": "Other"
   },
   "11": {
     "instr": "  %sub10 = add i32 %and9.neg, %sub6, !dbg !137",

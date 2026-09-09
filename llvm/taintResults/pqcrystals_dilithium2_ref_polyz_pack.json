@@ -47,6 +47,10 @@
     "instr": "  %sub15 = sub nsw i32 131072, %3, !dbg !155",
     "type": "BinOp"
   },
+  "23": {
+    "instr": "  %conv = trunc i32 %sub to i8, !dbg !156",
+    "type": "CastInst"
+  },
   "25": {
     "instr": "  %arrayidx20 = getelementptr inbounds nuw i8, ptr %r, i32 %mul18, !dbg !158",
     "type": "GetElementPtrInst"
@@ -58,6 +62,10 @@
   "27": {
     "instr": "  %shr = lshr i32 %sub, 8, !dbg !160",
     "type": "BinOp"
+  },
+  "28": {
+    "instr": "  %conv22 = trunc i32 %shr to i8, !dbg !161",
+    "type": "CastInst"
   },
   "30": {
     "instr": "  %4 = getelementptr inbounds nuw i8, ptr %r, i32 %mul23, !dbg !163",
@@ -74,6 +82,10 @@
   "33": {
     "instr": "  %shr27 = lshr i32 %sub, 16, !dbg !165",
     "type": "BinOp"
+  },
+  "34": {
+    "instr": "  %conv28 = trunc i32 %shr27 to i8, !dbg !166",
+    "type": "CastInst"
   },
   "36": {
     "instr": "  %5 = getelementptr inbounds nuw i8, ptr %r, i32 %mul29, !dbg !168",
@@ -99,6 +111,14 @@
     "instr": "  %7 = load i8, ptr %arrayidx35, align 1, !dbg !172",
     "type": "LoadInst"
   },
+  "43": {
+    "instr": "  %sub5.tr = trunc i32 %sub5 to i8, !dbg !172",
+    "type": "CastInst"
+  },
+  "44": {
+    "instr": "  %8 = shl i8 %sub5.tr, 2, !dbg !172",
+    "type": "BinOp"
+  },
   "45": {
     "instr": "  %conv37 = or i8 %8, %7, !dbg !172",
     "type": "BinOp"
@@ -110,6 +130,10 @@
   "47": {
     "instr": "  %shr39 = lshr i32 %sub5, 6, !dbg !173",
     "type": "BinOp"
+  },
+  "48": {
+    "instr": "  %conv40 = trunc i32 %shr39 to i8, !dbg !174",
+    "type": "CastInst"
   },
   "50": {
     "instr": "  %9 = getelementptr inbounds nuw i8, ptr %r, i32 %mul41, !dbg !176",
@@ -126,6 +150,10 @@
   "53": {
     "instr": "  %shr45 = lshr i32 %sub5, 14, !dbg !178",
     "type": "BinOp"
+  },
+  "54": {
+    "instr": "  %conv46 = trunc i32 %shr45 to i8, !dbg !179",
+    "type": "CastInst"
   },
   "56": {
     "instr": "  %10 = getelementptr inbounds nuw i8, ptr %r, i32 %mul47, !dbg !181",
@@ -151,6 +179,14 @@
     "instr": "  %12 = load i8, ptr %arrayidx54, align 1, !dbg !185",
     "type": "LoadInst"
   },
+  "63": {
+    "instr": "  %sub10.tr = trunc i32 %sub10 to i8, !dbg !185",
+    "type": "CastInst"
+  },
+  "64": {
+    "instr": "  %13 = shl i8 %sub10.tr, 4, !dbg !185",
+    "type": "BinOp"
+  },
   "65": {
     "instr": "  %conv57 = or i8 %13, %12, !dbg !185",
     "type": "BinOp"
@@ -162,6 +198,10 @@
   "67": {
     "instr": "  %shr59 = lshr i32 %sub10, 4, !dbg !186",
     "type": "BinOp"
+  },
+  "68": {
+    "instr": "  %conv60 = trunc i32 %shr59 to i8, !dbg !187",
+    "type": "CastInst"
   },
   "70": {
     "instr": "  %14 = getelementptr inbounds nuw i8, ptr %r, i32 %mul61, !dbg !189",
@@ -178,6 +218,10 @@
   "73": {
     "instr": "  %shr65 = lshr i32 %sub10, 12, !dbg !191",
     "type": "BinOp"
+  },
+  "74": {
+    "instr": "  %conv66 = trunc i32 %shr65 to i8, !dbg !192",
+    "type": "CastInst"
   },
   "76": {
     "instr": "  %15 = getelementptr inbounds nuw i8, ptr %r, i32 %mul67, !dbg !194",
@@ -203,6 +247,14 @@
     "instr": "  %17 = load i8, ptr %arrayidx74, align 1, !dbg !198",
     "type": "LoadInst"
   },
+  "83": {
+    "instr": "  %sub15.tr = trunc i32 %sub15 to i8, !dbg !198",
+    "type": "CastInst"
+  },
+  "84": {
+    "instr": "  %18 = shl i8 %sub15.tr, 6, !dbg !198",
+    "type": "BinOp"
+  },
   "85": {
     "instr": "  %conv77 = or i8 %18, %17, !dbg !198",
     "type": "BinOp"
@@ -214,6 +266,10 @@
   "87": {
     "instr": "  %shr79 = lshr i32 %sub15, 2, !dbg !199",
     "type": "BinOp"
+  },
+  "88": {
+    "instr": "  %conv80 = trunc i32 %shr79 to i8, !dbg !200",
+    "type": "CastInst"
   },
   "90": {
     "instr": "  %19 = getelementptr inbounds nuw i8, ptr %r, i32 %mul81, !dbg !202",
@@ -230,6 +286,10 @@
   "93": {
     "instr": "  %shr85 = lshr i32 %sub15, 10, !dbg !204",
     "type": "BinOp"
+  },
+  "94": {
+    "instr": "  %conv86 = trunc i32 %shr85 to i8, !dbg !205",
+    "type": "CastInst"
   },
   "96": {
     "instr": "  %20 = getelementptr inbounds nuw i8, ptr %r, i32 %mul87, !dbg !207",

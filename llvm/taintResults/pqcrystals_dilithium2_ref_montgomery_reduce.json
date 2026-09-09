@@ -1,0 +1,30 @@
+{
+  "0": {
+    "instr": "  %0 = trunc i64 %a to i32, !dbg !123",
+    "type": "CastInst"
+  },
+  "1": {
+    "instr": "  %conv2 = mul i32 %0, 58728449, !dbg !123",
+    "type": "BinOp"
+  },
+  "2": {
+    "instr": "  %conv3 = sext i32 %conv2 to i64, !dbg !125",
+    "type": "CastInst"
+  },
+  "3": {
+    "instr": "  %mul4.neg = mul nsw i64 %conv3, -8380417, !dbg !126",
+    "type": "BinOp"
+  },
+  "4": {
+    "instr": "  %sub = add i64 %mul4.neg, %a, !dbg !127",
+    "type": "BinOp"
+  },
+  "5": {
+    "instr": "  %shr = lshr i64 %sub, 32, !dbg !128",
+    "type": "BinOp"
+  },
+  "6": {
+    "instr": "  %conv5 = trunc nuw i64 %shr to i32, !dbg !129",
+    "type": "CastInst"
+  }
+}

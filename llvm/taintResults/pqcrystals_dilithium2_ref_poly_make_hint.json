@@ -1,4 +1,8 @@
 {
+  "2": {
+    "instr": "  %s.0 = phi i32 [ 0, %entry ], [ %add, %for.body ], !dbg !128",
+    "type": "PHINode"
+  },
   "5": {
     "instr": "  %arrayidx = getelementptr inbounds nuw [256 x i32], ptr %a0, i32 0, i32 %i.0, !dbg !139",
     "type": "GetElementPtrInst"
@@ -27,5 +31,13 @@
   "11": {
     "instr": "  store i32 %call, ptr %arrayidx2, align 4, !dbg !144",
     "type": "StoreInst"
+  },
+  "12": {
+    "instr": "  %add = add i32 %s.0, %call, !dbg !145",
+    "type": "BinOp"
+  },
+  "15": {
+    "instr": "  %s.0.lcssa = phi i32 [ %s.0, %for.cond ], !dbg !128",
+    "type": "PHINode"
   }
 }

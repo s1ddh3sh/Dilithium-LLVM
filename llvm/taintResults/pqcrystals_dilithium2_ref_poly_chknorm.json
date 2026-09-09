@@ -19,5 +19,9 @@
   "10": {
     "instr": "  %sub = sub nsw i32 %0, %and, !dbg !141",
     "type": "BinOp"
+  },
+  "11": {
+    "instr": "  %cmp4.not = icmp slt i32 %sub, %B, !dbg !142",
+    "type": "CmpInst"
   }
 }

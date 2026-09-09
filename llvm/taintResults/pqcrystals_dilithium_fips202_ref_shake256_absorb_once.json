@@ -1,0 +1,11 @@
+{
+  "0": {
+    "instr": "  call fastcc void @keccak_absorb_once(ptr noundef %state, i32 noundef 136, ptr noundef %in, i32 noundef %inlen, i8 noundef zeroext 31) #3, !dbg !132",
+    "type": "CallInst",
+    "callee": "keccak_absorb_once"
+  },
+  "2": {
+    "instr": "  store i64 136, ptr %arrayidx, align 8, !dbg !134",
+    "type": "StoreInst"
+  }
+}

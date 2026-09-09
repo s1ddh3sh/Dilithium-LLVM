@@ -2,5 +2,29 @@
   "0": {
     "instr": "  %0 = add i32 %a0, -95233, !dbg !124",
     "type": "BinOp"
+  },
+  "1": {
+    "instr": "  %or.cond = icmp ult i32 %0, -190465, !dbg !124",
+    "type": "CmpInst"
+  },
+  "2": {
+    "instr": "  %cmp3 = icmp eq i32 %a0, -95232, !dbg !124",
+    "type": "CmpInst"
+  },
+  "3": {
+    "instr": "  %cmp4.not = icmp ne i32 %a1, 0, !dbg !124",
+    "type": "CmpInst"
+  },
+  "4": {
+    "instr": "  %or.cond1.not = and i1 %cmp3, %cmp4.not, !dbg !124",
+    "type": "BinOp"
+  },
+  "5": {
+    "instr": "  %narrow = or i1 %or.cond, %or.cond1.not, !dbg !124",
+    "type": "BinOp"
+  },
+  "6": {
+    "instr": "  %retval.0 = zext i1 %narrow to i32, !dbg !124",
+    "type": "CastInst"
   }
 }

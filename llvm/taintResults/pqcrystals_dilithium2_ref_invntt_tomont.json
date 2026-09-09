@@ -71,6 +71,19 @@
     "instr": "  %8 = load i32, ptr %arrayidx18, align 4, !dbg !167",
     "type": "LoadInst"
   },
+  "39": {
+    "instr": "  %conv19 = sext i32 %8 to i64, !dbg !167",
+    "type": "CastInst"
+  },
+  "40": {
+    "instr": "  %mul = mul nsw i64 %conv, %conv19, !dbg !168",
+    "type": "BinOp"
+  },
+  "41": {
+    "instr": "  %call = call i32 @pqcrystals_dilithium2_ref_montgomery_reduce(i64 noundef %mul) #3, !dbg !169",
+    "type": "CallInst",
+    "callee": "pqcrystals_dilithium2_ref_montgomery_reduce"
+  },
   "42": {
     "instr": "  %9 = getelementptr i32, ptr %a, i32 %j.0, !dbg !170",
     "type": "GetElementPtrInst"
@@ -90,6 +103,19 @@
   "57": {
     "instr": "  %10 = load i32, ptr %arrayidx31, align 4, !dbg !188",
     "type": "LoadInst"
+  },
+  "58": {
+    "instr": "  %conv32 = sext i32 %10 to i64, !dbg !188",
+    "type": "CastInst"
+  },
+  "59": {
+    "instr": "  %mul33 = mul nsw i64 %conv32, 41978, !dbg !190",
+    "type": "BinOp"
+  },
+  "60": {
+    "instr": "  %call34 = call i32 @pqcrystals_dilithium2_ref_montgomery_reduce(i64 noundef %mul33) #3, !dbg !191",
+    "type": "CallInst",
+    "callee": "pqcrystals_dilithium2_ref_montgomery_reduce"
   },
   "61": {
     "instr": "  %arrayidx35 = getelementptr inbounds nuw i32, ptr %a, i32 %j.1, !dbg !192",

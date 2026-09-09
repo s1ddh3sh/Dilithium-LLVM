@@ -12,6 +12,11 @@
     "type": "CallInst",
     "callee": "pqcrystals_dilithium2_ref_unpack_sk"
   },
+  "17": {
+    "instr": "  call void @pqcrystals_dilithium_fips202_ref_shake256_init(ptr noundef nonnull %state) #3, !dbg !187",
+    "type": "CallInst",
+    "callee": "pqcrystals_dilithium_fips202_ref_shake256_init"
+  },
   "18": {
     "instr": "  call void @pqcrystals_dilithium_fips202_ref_shake256_absorb(ptr noundef nonnull %state, ptr noundef nonnull %add.ptr, i32 noundef 64) #3, !dbg !188",
     "type": "CallInst",
@@ -27,10 +32,20 @@
     "type": "CallInst",
     "callee": "pqcrystals_dilithium_fips202_ref_shake256_absorb"
   },
+  "21": {
+    "instr": "  call void @pqcrystals_dilithium_fips202_ref_shake256_finalize(ptr noundef nonnull %state) #3, !dbg !191",
+    "type": "CallInst",
+    "callee": "pqcrystals_dilithium_fips202_ref_shake256_finalize"
+  },
   "22": {
     "instr": "  call void @pqcrystals_dilithium_fips202_ref_shake256_squeeze(ptr noundef nonnull %add.ptr2, i32 noundef 64, ptr noundef nonnull %state) #3, !dbg !192",
     "type": "CallInst",
     "callee": "pqcrystals_dilithium_fips202_ref_shake256_squeeze"
+  },
+  "23": {
+    "instr": "  call void @pqcrystals_dilithium_fips202_ref_shake256_init(ptr noundef nonnull %state) #3, !dbg !193",
+    "type": "CallInst",
+    "callee": "pqcrystals_dilithium_fips202_ref_shake256_init"
   },
   "24": {
     "instr": "  call void @pqcrystals_dilithium_fips202_ref_shake256_absorb(ptr noundef nonnull %state, ptr noundef nonnull %add.ptr1, i32 noundef 32) #3, !dbg !194",
@@ -46,6 +61,11 @@
     "instr": "  call void @pqcrystals_dilithium_fips202_ref_shake256_absorb(ptr noundef nonnull %state, ptr noundef nonnull %add.ptr2, i32 noundef 64) #3, !dbg !196",
     "type": "CallInst",
     "callee": "pqcrystals_dilithium_fips202_ref_shake256_absorb"
+  },
+  "27": {
+    "instr": "  call void @pqcrystals_dilithium_fips202_ref_shake256_finalize(ptr noundef nonnull %state) #3, !dbg !197",
+    "type": "CallInst",
+    "callee": "pqcrystals_dilithium_fips202_ref_shake256_finalize"
   },
   "28": {
     "instr": "  call void @pqcrystals_dilithium_fips202_ref_shake256_squeeze(ptr noundef nonnull %add.ptr3, i32 noundef 64, ptr noundef nonnull %state) #3, !dbg !198",
@@ -117,6 +137,11 @@
     "type": "CallInst",
     "callee": "pqcrystals_dilithium2_ref_polyveck_pack_w1"
   },
+  "45": {
+    "instr": "  call void @pqcrystals_dilithium_fips202_ref_shake256_init(ptr noundef nonnull %state) #3, !dbg !215",
+    "type": "CallInst",
+    "callee": "pqcrystals_dilithium_fips202_ref_shake256_init"
+  },
   "46": {
     "instr": "  call void @pqcrystals_dilithium_fips202_ref_shake256_absorb(ptr noundef nonnull %state, ptr noundef nonnull %add.ptr2, i32 noundef 64) #3, !dbg !216",
     "type": "CallInst",
@@ -126,6 +151,11 @@
     "instr": "  call void @pqcrystals_dilithium_fips202_ref_shake256_absorb(ptr noundef nonnull %state, ptr noundef %sig, i32 noundef 768) #3, !dbg !217",
     "type": "CallInst",
     "callee": "pqcrystals_dilithium_fips202_ref_shake256_absorb"
+  },
+  "48": {
+    "instr": "  call void @pqcrystals_dilithium_fips202_ref_shake256_finalize(ptr noundef nonnull %state) #3, !dbg !218",
+    "type": "CallInst",
+    "callee": "pqcrystals_dilithium_fips202_ref_shake256_finalize"
   },
   "49": {
     "instr": "  call void @pqcrystals_dilithium_fips202_ref_shake256_squeeze(ptr noundef %sig, i32 noundef 32, ptr noundef nonnull %state) #3, !dbg !219",
@@ -221,6 +251,10 @@
     "instr": "  %call17 = call i32 @pqcrystals_dilithium2_ref_polyveck_make_hint(ptr noundef nonnull %h, ptr noundef nonnull %w0, ptr noundef nonnull %w1) #3, !dbg !240",
     "type": "CallInst",
     "callee": "pqcrystals_dilithium2_ref_polyveck_make_hint"
+  },
+  "75": {
+    "instr": "  %cmp = icmp ugt i32 %call17, 80, !dbg !242",
+    "type": "CmpInst"
   },
   "77": {
     "instr": "  call void @pqcrystals_dilithium2_ref_pack_sig(ptr noundef %sig, ptr noundef %sig, ptr noundef nonnull %z, ptr noundef nonnull %h) #3, !dbg !244",

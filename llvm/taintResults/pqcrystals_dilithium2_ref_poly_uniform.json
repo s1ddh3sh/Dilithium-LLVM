@@ -3,5 +3,15 @@
     "instr": "  call void @pqcrystals_dilithium2_ref_dilithium_shake128_stream_init(ptr noundef nonnull %state, ptr noundef %seed, i16 noundef zeroext %nonce) #3, !dbg !149",
     "type": "CallInst",
     "callee": "pqcrystals_dilithium2_ref_dilithium_shake128_stream_init"
+  },
+  "3": {
+    "instr": "  call void @pqcrystals_dilithium_fips202_ref_shake128_squeezeblocks(ptr noundef nonnull %buf, i32 noundef 5, ptr noundef nonnull %state) #3, !dbg !150",
+    "type": "CallInst",
+    "callee": "pqcrystals_dilithium_fips202_ref_shake128_squeezeblocks"
+  },
+  "24": {
+    "instr": "  call void @pqcrystals_dilithium_fips202_ref_shake128_squeezeblocks(ptr noundef nonnull %add.ptr, i32 noundef 1, ptr noundef nonnull %state) #3, !dbg !175",
+    "type": "CallInst",
+    "callee": "pqcrystals_dilithium_fips202_ref_shake128_squeezeblocks"
   }
 }

@@ -1,4 +1,12 @@
 {
+  "0": {
+    "instr": "  %isneg = icmp slt i32 %a, 0, !dbg !123",
+    "type": "CmpInst"
+  },
+  "1": {
+    "instr": "  %and = select i1 %isneg, i32 8380417, i32 0, !dbg !123",
+    "type": "Other"
+  },
   "2": {
     "instr": "  %add = add nsw i32 %a, %and, !dbg !124",
     "type": "BinOp"
