@@ -1397,11 +1397,19 @@ int main(int argc, char **argv) {
     PB.crossRegisterProxies(LAM, FAM, CGAM, MAM);
 
     auto &LI = FAM.getResult<LoopAnalysis>(*preOptF);
-    callInsideLoop = (LI.getLoopFor(origCall->getParent()) != nullptr);
-
+    Loop *L = LI.getLoopFor(origCall->getParent());
+    callInsideLoop = false;
+    // callInsideLoop = (LI.getLoopFor(origCall->getParent()) != nullptr);
+    if (L) {
+      auto &SE = FAM.getResult<ScalarEvolutionAnalysis>(*preOptF);
+      unsigned tc = SE.getSmallConstantTripCount(L);
+      callInsideLoop = (tc != 0 && tc <= kMaxUnrollTripCount);
+    }
     errs() << "Call to " << skippedCalleeName << " at line " << skipLine
-           << " is " << (callInsideLoop ? "inside" : "NOT inside")
-           << " a loop.\n";
+           << " is "
+           << (callInsideLoop ? "inside a boundedly-unrollable loop"
+                              : "NOT inside such a loop (will erase in place)")
+           << ".\n";
   }
 
   auto makePB = [&](Module &M, auto buildPipeline) {
